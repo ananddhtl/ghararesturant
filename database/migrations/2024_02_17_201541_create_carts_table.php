@@ -17,10 +17,11 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('food_id');
             $table->foreign('food_id')->references('id')->on('foods')->onDelete('cascade');
-            $table->string('quantity');
+            $table->unsignedInteger('quantity'); // Assuming quantity should be an integer
             $table->timestamps();
         });
     }
+    
     
     /**
      * Reverse the migrations.
