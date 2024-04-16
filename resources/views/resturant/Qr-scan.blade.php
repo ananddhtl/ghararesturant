@@ -23,13 +23,7 @@
             <div class="card-body">
                 <div class="text-center">
                     <h2>
-                        @foreach ($settings as $set)
-                            @if ($set->siteKey == 'ResturantName')
-                                <i class="fa fa-phone" aria-hidden="true"></i>
-                                <a href="{{ route('/') }}"
-                                    style="text-decoration: none;color:#FF6701;">{{ $set->siteValue }}</a>
-                            @endif
-                        @endforeach
+                        
                     </h2>
                     <h3>Menu</h3>
                     <h6>Take your time and Order</h6>
@@ -129,12 +123,7 @@
                 <div class="px-5" style="text-align: center"> You can order Food Via Website or call us on
 
                     <i class="fa fa-phone" aria-hidden="true"></i>
-                    @foreach ($settings as $set)
-                        @if ($set->siteKey == 'Phone')
-                            <a href="tel:{{ $set->siteValue }}"
-                                style="text-decoration: none;color:white;">{{ $set->siteValue }}</a>
-                        @endif
-                    @endforeach
+                   
                 </div>
                 <div class="px-5" style="text-align: center; padding:10px 0 "> If you want to reserve table for more
                     than 4 people Please give us call a day before
