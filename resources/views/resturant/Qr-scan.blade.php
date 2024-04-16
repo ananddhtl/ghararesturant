@@ -22,7 +22,15 @@
                 ">
             <div class="card-body">
                 <div class="text-center">
-                    
+                    <h2>
+                        @foreach ($settings as $set)
+                            @if ($set->siteKey == 'ResturantName')
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <a href="{{ route('/') }}"
+                                    style="text-decoration: none;color:#FF6701;">{{ $set->siteValue }}</a>
+                            @endif
+                        @endforeach
+                    </h2>
                     <h3>Menu</h3>
                     <h6>Take your time and Order</h6>
                 </div>
