@@ -18,7 +18,7 @@ use App\Http\Controllers\FrontendController\TeamFrController;
 use App\Http\Controllers\FrontendController\TestimonialFrController;
 use App\Http\Controllers\FrontendController\UserFrController;
 use App\Http\Controllers\PaymentFailedController;
-use App\Http\Controllers\PaymentSuccessController;
+// use App\Http\Controllers\PaymentSuccessController;
 use App\Http\Controllers\QRCodeController;
 use App\Http\Controllers\ReservationController;
 
@@ -44,6 +44,7 @@ Route::get('/menu', MenuFrController::class)->name('menu');
 Route::get('/booked-table', BookedTableController::class)->name('booked-table');
 Route::get('/order', OrderController::class)->name('order');
 Route::get('/payment-failed', PaymentFailedController::class)->name('payment-failed');
+// Route::get('/payment-success', PaymentSuccessController::class)->name('payment-success');
 Route::get('/qr-page', QRCodeController::class)->name('qr-page');
 Route::get('/404', NotFoundController::class)->name('404');
 Route::get('/user-password', [UserFrController::class, 'passwordChange'])->name('change.password');
